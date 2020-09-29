@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_loupe"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCamera"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="100dp"
+            app:cardBackgroundColor="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgMenu">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/camerra"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="145dp"
+                android:text="Camera"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="159dp"
+                android:text="New Product form Leica Brand"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </androidx.cardview.widget.CardView>
+
+
+            <fragment
+                android:id="@+id/fragmentItem"
+                android:name="com.hlaingyaminhtetnaing.myshopping.fragment.ItemFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#ffffff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCamera"></fragment>
+
+
+
+        <fragment
+            android:id="@+id/fragmentCountry"
+            android:name="com.hlaingyaminhtetnaing.myshopping.fragment.CountryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItem"></fragment>
+
+        <fragment
+            android:id="@+id/fragmentIphone"
+            android:name="com.hlaingyaminhtetnaing.myshopping.fragment.IphoneFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentCountry"></fragment>
+
+        <fragment
+            android:id="@+id/fragmentNeaon"
+            android:name="com.hlaingyaminhtetnaing.myshopping.fragment.NeonFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentIphone"></fragment>
+
+        <fragment
+            android:id="@+id/fragmentDress"
+            android:name="com.hlaingyaminhtetnaing.myshopping.fragment.DressFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentNeaon"></fragment>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

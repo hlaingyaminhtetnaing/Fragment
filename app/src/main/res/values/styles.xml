@@ -1,0 +1,25 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+<style name="txtNameColor">
+    <item name="android:textColor">#473D3D</item>
+    <item name="android:layout_marginLeft">5dp</item>
+</style>
+    <style name="txtMadeMargin">
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+    <style name="txtPriceColor">
+        <item name="android:textColor">#FA754C</item>
+    </style>
+    <style name="txtCountryColor">
+        <item name="android:textColor">#F4EFEF</item>
+    </style>
+    <style name="txtNewStyle">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+</resources>
