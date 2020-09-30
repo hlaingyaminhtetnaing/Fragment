@@ -6,5 +6,6 @@ data class Item(
     var imageItem: Int,
     var name: String,
     var made: String,
-    var price: Long
+    var price: Long,
+    var rating:Double
 )

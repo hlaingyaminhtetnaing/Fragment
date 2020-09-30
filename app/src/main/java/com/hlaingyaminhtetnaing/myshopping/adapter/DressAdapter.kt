@@ -9,6 +9,7 @@ import com.hlaingyaminhtetnaing.myshopping.model.Dress
 import com.hlaingyaminhtetnaing.myshopping.model.Iphone
 import kotlinx.android.synthetic.main.dress.view.*
 import kotlinx.android.synthetic.main.iphone.view.*
+import kotlinx.android.synthetic.main.neon.view.*
 
 class DressAdapter( var dressList: ArrayList<Dress>) :
 RecyclerView.Adapter<DressAdapter.dressViewHolder>(){
@@ -19,6 +20,7 @@ RecyclerView.Adapter<DressAdapter.dressViewHolder>(){
             itemView.txtDressMade.text = dress.made
             itemView.txtDressPrice.text = dress.price.toString()
             itemView.ImgDress.setImageResource(dress.img)
+            itemView.ratingDress.rating=dress.rating.toFloat()
         }
     }
 

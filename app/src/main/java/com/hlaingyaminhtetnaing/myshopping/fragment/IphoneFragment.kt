@@ -29,8 +29,10 @@ class IphoneFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var iphoneList=ArrayList<Iphone>()
-        iphoneList.add(Iphone("NEW","30 % off","Iphone 8 Plus","Apple",980000,R.drawable.iphonee))
-        iphoneList.add(Iphone("NEW","34 % off","GhostBed 11 inch Cooling Gel Memory Foam....","GhostedBed",325000,R.drawable.bed))
+        iphoneList.add(Iphone("NEW","30 % off","Iphone 8 Plus",
+            "Apple",980000,R.drawable.iphonee,4.0))
+        iphoneList.add(Iphone("NEW","34 % off",
+            "GhostBed 11 inch Cooling Gel Memory Foam....","GhostedBed",325000,R.drawable.bed,4.0))
         var iphoneadapter =IphoneAdapter(iphoneList)
         IphoneRecycler.layoutManager= LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
         IphoneRecycler.adapter = iphoneadapter

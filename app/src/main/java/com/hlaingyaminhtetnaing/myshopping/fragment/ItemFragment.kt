@@ -26,9 +26,9 @@ class ItemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var itemList=ArrayList<Item>()
-        itemList.add(Item(R.drawable.lv,"Hyde Park N41015","LOUIS VUITTON",9999999))
-        itemList.add(Item(R.drawable.ladygaga,"HORNS PINK LONG SLEEVE T SHIRT","Lady Gaga",72000))
-        itemList.add(Item(R.drawable.iphone,"Iphone 8","Apple",600000))
+        itemList.add(Item(R.drawable.lv,"Hyde Park N41015","LOUIS VUITTON",9999999,4.0))
+        itemList.add(Item(R.drawable.ladygaga,"HORNS PINK LONG SLEEVE T SHIRT","Lady Gaga",72000,5.0))
+        itemList.add(Item(R.drawable.iphone,"Iphone 8","Apple",600000,5.0))
         var itemAdapter = ItemAdapter(itemList)
         itemRecycler.layoutManager= LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         itemRecycler.adapter = itemAdapter

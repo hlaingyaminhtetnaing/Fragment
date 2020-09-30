@@ -18,6 +18,7 @@ class NeonAdapter (var neonList: ArrayList<Neon>) :
             itemView.txtNeonMade.text = neon.made
             itemView.txtNeonPrice.text = neon.price.toString()
             itemView.ImgNeon.setImageResource(neon.img)
+            itemView.ratingNeon.rating=neon.rating.toFloat()
         }
     }
 

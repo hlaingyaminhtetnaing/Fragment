@@ -26,7 +26,7 @@ class NeonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var neonList=ArrayList<Neon>()
-        neonList.add(Neon("Nintendo Switch-Neon Blue and Red Joy-Con","Nintendo",359000,R.drawable.gameswitch))
+        neonList.add(Neon("Nintendo Switch-Neon Blue and Red Joy-Con","Nintendo",359000,R.drawable.gameswitch,4.0))
 
         var neonadapter = NeonAdapter(neonList)
         neonRecycler.layoutManager= LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)

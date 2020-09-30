@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hlaingyaminhtetnaing.myshopping.R
 import com.hlaingyaminhtetnaing.myshopping.model.Item
 import kotlinx.android.synthetic.main.item.view.*
+import kotlinx.android.synthetic.main.neon.view.*
 
 class ItemAdapter (var itemList: ArrayList<Item>) :
     RecyclerView.Adapter<ItemAdapter.itemViewHolder>() {
@@ -16,6 +17,7 @@ class ItemAdapter (var itemList: ArrayList<Item>) :
            itemView.txtName.text = item.name
             itemView.txtMade.text=item.made
             itemView.txtPrice.text=item.price.toString()
+            itemView.rating_bar.rating=item.rating.toFloat()
         }
     }
 

@@ -5,5 +5,6 @@ data class Dress(
     var name: String,
     var made: String,
     var price: Int,
-    var img: Int
+    var img: Int,
+    var rating:Double
 )

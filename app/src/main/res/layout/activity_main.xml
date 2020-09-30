@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="#E6E4D5"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
         <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/hh"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <ImageView
             android:id="@+id/imgMenu"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/ic_menu"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"></ImageView>
@@ -25,6 +36,8 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/ic_loupe"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,64 +46,250 @@
             android:id="@+id/cardCamera"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginTop="100dp"
             app:cardBackgroundColor="#ffffff"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgMenu">
+            app:layout_constraintTop_toBottomOf="@id/imgHome">
 
             <ImageView
-                android:layout_width="250dp"
+                android:layout_width="380dp"
                 android:layout_height="160dp"
-                android:layout_marginLeft="90dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/camerra"></ImageView>
+                android:scaleType="centerCrop"
+                android:src="@drawable/cameraleica"></ImageView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="145dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="140dp"
                 android:text="Camera"
                 android:textColor="#ffffff" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="159dp"
                 android:text="New Product form Leica Brand"
                 android:textColor="#ffffff"
                 android:textSize="12sp" />
         </androidx.cardview.widget.CardView>
 
+        <ImageView
+            android:id="@+id/imgBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_product"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardCamera"></ImageView>
 
-            <fragment
-                android:id="@+id/fragmentItem"
-                android:name="com.hlaingyaminhtetnaing.myshopping.fragment.ItemFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="#ffffff"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardCamera"></fragment>
+        <TextView
+            android:id="@+id/txtBrowse"
+            style="@style/WhiteColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="103dp"
+            android:text="BROWSE BY"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardCamera" />
 
+        <Button
+            android:id="@+id/btnBrand"
+            style="@style/WhiteColor"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="90dp"
+            android:background="@drawable/btn_brand"
+            android:text="BRAND"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtBrowse" />
 
+        <TextView
+            android:id="@+id/txtLA"
+            style="@style/txtThreeColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="| Lastest Arrivals"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBrand" />
+
+        <Button
+            android:id="@+id/btn_VAll"
+            style="@style/txtThreeColor"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_viewall"
+            android:text="View All"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBrand" />
+
+        <fragment
+            android:id="@+id/fragmentItem"
+            android:name="com.hlaingyaminhtetnaing.myshopping.fragment.ItemFragment"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            app:cardBackgroundColor="#ffffff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_VAll"
+            tools:layout="@layout/fragment_item"></fragment>
+
+        <ImageView
+            android:id="@+id/imgUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_product"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItem" />
+
+        <TextView
+            android:id="@+id/txtOne"
+            style="@style/WhiteColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="167dp"
+            android:text="CAN'T"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItem" />
+
+        <TextView
+            android:id="@+id/txtTwo"
+            style="@style/blackColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text=" FIND"
+            app:layout_constraintLeft_toRightOf="@id/txtOne"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItem" />
+
+        <TextView
+            android:id="@+id/txtThree"
+            style="@style/WhiteColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text=" WHAT YOU"
+            app:layout_constraintLeft_toRightOf="@id/txtTwo"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItem" />
+
+        <TextView
+            android:id="@+id/txtFour"
+            style="@style/blackColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="115dp"
+            android:text="LOOKING FOR?"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtOne" />
+
+        <TextView
+            android:id="@+id/txtFive"
+            style="@style/blackColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="133dp"
+            android:text="SEARCH BY"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtFour" />
+
+        <Button
+            android:id="@+id/btnUpload"
+            style="@style/WhiteColor"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="55dp"
+            android:background="@drawable/btn_upload"
+            android:text="UPLOAD PICTURE"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtFive" />
+
+        <TextView
+            android:id="@+id/txtCBC"
+            style="@style/txtThreeColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="| Choose by Country"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgUpload" />
 
         <fragment
             android:id="@+id/fragmentCountry"
             android:name="com.hlaingyaminhtetnaing.myshopping.fragment.CountryFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="230dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragmentItem"></fragment>
+            app:layout_constraintTop_toBottomOf="@id/txtCBC"></fragment>
+
+
+        <ImageView
+            android:id="@+id/ImgMeeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ccustomer_services"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentCountry" />
+
+        <TextView
+            android:id="@+id/txtNeed"
+            style="@style/blackColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:text="NEED HELP?"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentCountry" />
+
+        <TextView
+            android:id="@+id/txtCS"
+            style="@style/WhiteColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50dp"
+            android:text="CUSTOMER SERVICE"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtNeed" />
+
+        <Button
+            android:id="@+id/btnCall"
+            style="@style/WhiteColor"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_upload"
+            android:text="CALL NOW    📞"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCS" />
+
+        <TextView
+            android:id="@+id/txtPP"
+            style="@style/txtThreeColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="| Popular Products"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ImgMeeting" />
 
         <fragment
             android:id="@+id/fragmentIphone"
             android:name="com.hlaingyaminhtetnaing.myshopping.fragment.IphoneFragment"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fragmentCountry"></fragment>
+            app:layout_constraintTop_toBottomOf="@id/txtPP"></fragment>
 
         <fragment
             android:id="@+id/fragmentNeaon"

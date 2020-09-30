@@ -27,7 +27,8 @@ class DressFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var dressList=ArrayList<Dress>()
-        dressList.add(Dress("NEW","BELAROI Womens Comfy Swing Tunic Short......","Belaroi",18990,R.drawable.dressbb))
+        dressList.add(Dress("NEW","BELAROI Womens Comfy Swing Tunic Short......","Belaroi",
+            18990,R.drawable.dressbb,4.0))
         var dressadapter = DressAdapter(dressList)
         dressRecycler.layoutManager= LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
         dressRecycler.adapter = dressadapter

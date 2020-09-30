@@ -9,6 +9,7 @@ import com.hlaingyaminhtetnaing.myshopping.model.Country
 import com.hlaingyaminhtetnaing.myshopping.model.Iphone
 import kotlinx.android.synthetic.main.country.view.*
 import kotlinx.android.synthetic.main.iphone.view.*
+import kotlinx.android.synthetic.main.neon.view.*
 
 class IphoneAdapter(var iphoneList: ArrayList<Iphone>) :
     RecyclerView.Adapter<IphoneAdapter.iphoneViewHolder>() {
@@ -20,6 +21,7 @@ class IphoneAdapter(var iphoneList: ArrayList<Iphone>) :
             itemView.txtIphoneMade.text = iphone.made
             itemView.txtIphonePrice.text = iphone.price.toString()
             itemView.ImgIphone.setImageResource(iphone.img)
+            itemView.ratingIphone.rating=iphone.rating.toFloat()
         }
     }
 
